@@ -18,7 +18,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://ask-your-pdf-338a.vercel.app/"],  # Allow specific origin (frontend)
+    allow_origins=["https://ask-your-pdf-338a.vercel.app"],  # Allow specific origin (frontend)
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods
     allow_headers=["*"],  # Allow all headers
