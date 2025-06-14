@@ -5,4 +5,4 @@ pillow
 numpy
 joblib
 pydantic
-python-multiparts
+python-multipart
