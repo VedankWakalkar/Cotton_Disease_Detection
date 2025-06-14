@@ -11,7 +11,9 @@ import pickle
 from joblib import load
 from pydantic import BaseModel
 from utils.utils import get_crop_recommendation, get_fertilizer_recommendation
+import os
 
+PORT = int(os.environ.get("PORT", 8000))
 app = FastAPI()
 
 app.add_middleware(
@@ -117,4 +119,4 @@ async def fertilizer_recommendation(data: FertilizerInput):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error during fertilizer recommendation: {str(e)}")
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=PORT)
