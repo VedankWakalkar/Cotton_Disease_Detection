@@ -51,9 +51,9 @@ export default function CropRecommendations() {
     };
 
     try {
-      console.log("Payload:", payload);
+      // console.log("Payload:", payload);
       const response = await axios.post(
-        "http://127.0.0.1:8000/crop_recommendation",
+        "https://cotton-disease-detection.onrender.com/crop_recommendation",
         payload
       );
       console.log("Response:", response.data);

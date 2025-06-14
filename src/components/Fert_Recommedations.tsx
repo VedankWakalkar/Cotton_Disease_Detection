@@ -41,7 +41,7 @@ const Fert_Recommedations = () => {
     try {
       console.log("Control Reached in the Try part", values);
       const response = await axios.post(
-        "http://127.0.0.1:8000/fertilizer_recommendation",
+        "https://cotton-disease-detection.onrender.com/fertilizer_recommendation",
         values
       );
       setResult(response.data.recommended_fertilizer);
